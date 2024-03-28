@@ -8,15 +8,24 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Testimonios from "./components/Testimonios.jsx";
 import Footer from "./components/Footer.jsx";
+import carruselInformation from "./components/carruselInformation.js";
 
 function App() {
 	return (
 		<>
 			<Header />
 			<div>
-				<Carrusel />
+				<Carrusel photos={carruselInformation} currentPhotoIndex={0} />
 			</div>
-			<div className="flex justify-between items-center bg-[#E6E6E6] px-[5rem]">
+			<div
+				className="flex justify-between items-center bg-[#E6E6E6] px-[5rem]"
+				style={{
+					backgroundImage:
+						"linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(fondoCristiano.jpg)",
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}}
+			>
 				<div className="w-[50%]">
 					<h1 className="text-[50px]">SureBets, Arbitraje deportivo?</h1>
 					<p className="text-[30px]">
@@ -34,30 +43,32 @@ function App() {
 					</div>
 				</div>
 				<div className="w-[400px]">
-					<img src="img1.png" className="w-[100%] h-[100%]" />
+					<img src="img1.png" className="w-[100%] h-[100%] img-carr" />
 				</div>
 			</div>
 			<div className="bg-[#F1F1F1] px-[3rem] py-[3rem]">
 				<h1 className="text-[25px] py-[1rem]">Cursos Disponibles</h1>
 				<div className="flex justify-evenly">
 					<Card
-						title="Arbitraje Deportivo"
+						title="Arbitraje Hibrido"
+						img="curso1.png"
+						description="Descripción del curso.... Rentabiliza con lo que más te apasiona, los deportes y aprende a ganarle a las casas de apuestas con las SUREBETS."
+					/>
+					<Card
+						title="Arbitraje Online"
 						img="course1.png"
 						description="Descripción del curso.... Rentabiliza con lo que más te apasiona, los deportes y aprende a ganarle a las casas de apuestas con las SUREBETS."
 					/>
 					<Card
-						title="Curso 2"
-						img="course1.png"
-						description="Descripción del curso.... Rentabiliza con lo que más te apasiona, los deportes y aprende a ganarle a las casas de apuestas con las SUREBETS."
-					/>
-					<Card
-						title="Curso 3"
-						img="course1.png"
+						title="Arbitraje Presencial"
+						img="logo.png"
 						description="Descripción del curso.... Rentabiliza con lo que más te apasiona, los deportes y aprende a ganarle a las casas de apuestas con las SUREBETS."
 					/>
 				</div>
 			</div>
+			<img className="w-[screen]" src="divisorInvertido.png" />
 			<About />
+			<img className="w-[screen]" src="divisor.png" />
 			<Testimonios />
 			<div className="bg-[#E6E6E6] p-[5rem]">
 				<div>

@@ -15,23 +15,12 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
 	{
 		label: "Kevin Villacreses – Quito, Ecuador",
-		imgPath:
-			"https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+		imgPath: "testimonio1.png",
 	},
 	{
 		label: "David Guevara - Trujillo, Perú",
 		imgPath:
 			"https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
-	},
-	{
-		label: "Juan Perez - Lima, Perú",
-		imgPath:
-			"https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250",
-	},
-	{
-		label: "Pedro Lopez - CDMX, México",
-		imgPath:
-			"https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
 	},
 ];
 
@@ -53,7 +42,7 @@ function CarrouselMUI() {
 	};
 
 	return (
-		<Box sx={{maxWidth: "100%", flexGrow: 1}}>
+		<Box sx={{maxWidth: "70%", flexGrow: 1}}>
 			<Paper
 				square
 				elevation={0}
@@ -65,16 +54,7 @@ function CarrouselMUI() {
 					bgcolor: "background.default",
 					justifyContent: "center",
 				}}
-			>
-				<Typography
-					sx={{
-						fontSize: "2rem",
-						marginBottom: "1rem",
-					}}
-				>
-					{images[activeStep].label}
-				</Typography>
-			</Paper>
+			></Paper>
 			<AutoPlaySwipeableViews
 				axis={theme.direction === "rtl" ? "x-reverse" : "x"}
 				index={activeStep}
